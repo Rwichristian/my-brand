@@ -1,0 +1,557 @@
+*
+{
+    font-family: "poppins" , sans-serif;
+}
+
+.home
+{
+    background-image:url(img-home/memphis-mini-dark.png);
+    display: flex;
+
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+.navigation
+{
+    position: relative;
+float: left;
+background-color: #FF4B00;
+opacity: 0.8;
+flex: 20%;
+padding-top: 200px;
+transition: all 0.4s ease;
+}
+ .navigation ul li :hover
+ {
+     color: #FF4B00;
+     background-color: #FFD337;
+
+ }
+a
+{
+    text-decoration: none;
+}
+
+.anchor
+{
+    color: #ffff;
+}
+.nav-icons
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-left: 10px;
+
+
+}
+
+.align
+{
+    position: relative;
+    vertical-align: middle;
+    padding-right: 15px;
+}
+.nav-items
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: px;
+    padding-bottom: 12px;
+    font-size: 15px;
+    list-style: none;
+}
+
+.admin-main
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-right: 20px;
+    padding-right: 12px;
+}
+
+.admin
+{
+    color: #ffff;
+    margin-right: 23px;
+}
+
+.nav-pop
+{
+    position: fixed;
+    color: #FFD337;
+}
+
+.image1
+{
+    position: var(.nav-items);
+    text-align: center;
+    padding-top: 34px;
+    margin-bottom: -10%;
+    margin-left: 10%;
+}
+
+h1
+{
+    color: #ffff;
+    text-align: center;
+}
+
+h4
+{
+    color: #FFD337;
+    text-align: center;
+}
+
+.anchor-work
+{
+    text-align: center;
+}
+
+.my
+{
+    border: 2px solid #FF4B00;
+    background-color: #FF4B00;
+    color: #ffff;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.home-w
+{
+    color: #ffff;
+    padding-left: 300px;
+    padding-right: 300px;
+    text-align: center;
+}
+
+.about
+{
+    background-image: url(img-blog/papyrus.png);
+    padding: 50px;
+}
+
+.about-content
+{
+    position: relative;
+    margin: 40px 1;
+    background: #ffff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow:  -5px 5px 10px rgba(0,0,0,0.3);
+outline: 0;
+}
+
+.cv
+{
+    border: #ff4b00 2px solid;
+    border-radius: 36px;
+    background-color: #FF4B00;
+    color: #ffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.skills
+{
+    position: relative;
+    margin: 40px 1;
+    background: #ffff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow:  -5px 5px 10px rgba(0,0,0,0.3);
+}
+
+.skill-list1
+{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 6px;
+     list-style: none;
+}
+
+.skill-list2
+{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-left: 180px;
+    margin-right: 180px;
+     list-style: none;
+}
+
+.my-work
+{
+    background-image: url(img-blog/papyrus.png);
+    padding: 50px; 
+}
+
+.app-design
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin: 40px 1;
+    background: #ffff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow:  -5px 5px 10px rgba(0,0,0,0.3);
+   
+}
+
+.soft1
+{
+display: flex;
+flex-direction: row;
+list-style: none;
+justify-content: space-between;
+}
+
+.image-1
+{
+    float: right;
+    padding-right: 10px;
+    padding-top: 40px;
+}
+.web-design
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin: 40px 1;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    background: #ffff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow:  -5px 5px 10px rgba(0,0,0,0.3);
+}
+
+.soft2
+{
+display: flex;
+flex-direction: row;
+list-style: none;
+justify-content: space-between;
+}
+
+.image-2
+{
+    float: left;
+    padding-right: 10px;
+    padding-top: 40px;
+}
+
+.graphic-design
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin: 40px 1;
+    background: #ffff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow:  -5px 5px 10px rgba(0,0,0,0.3);
+}
+
+.soft3
+{
+display: flex;
+flex-direction: row;
+list-style: none;
+justify-content: space-between;
+}
+
+.image-3
+{
+    float: right;
+    padding-right: 10px;
+}
+
+.blogs
+{
+    background-image: url(img-blog/papyrus.png);
+    padding: 50px; 
+}
+
+.blog-flexer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.blog-1
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 40px 1;
+    background: #ffff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow:  -5px 5px 10px rgba(0,0,0,0.3);
+}
+
+.blog-1-w
+{
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.blog-2
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 40px 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: #ffff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow:  -5px 5px 10px rgba(0,0,0,0.3);
+   
+}
+
+.blog-2-w
+{
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.blog-3
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 40px 1;
+    background: #ffff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow:  -5px 5px 10px rgba(0,0,0,0.3);
+}
+
+.blog-3-w
+{
+    text-align: center;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.img-b
+{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+.contact
+{
+    background-image: ;
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(img-contact/memphis-mini.png);
+}
+ .contact .contact-content
+{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .contact-content h2
+{
+    font-size: 36px;
+    font-weight: 500;
+    color: #FF4B00;
+}
+
+.contact .contact-content p
+{
+    font-weight: 300;
+    color: #FF4B00;
+}
+
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: #ff4b00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3
+{
+    font-weight: 500;
+    color: #FF4B00;
+}
+
+.contactform
+{
+    width: 40%;
+    padding: 40px;
+    background: #ffff;
+}
+
+.contactform h2
+{
+    font-size: 30px;
+    color: #FF4B00;
+    font-weight: 500;
+}
+
+.contactform .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactform .inputBox input,
+.contactform .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #FF4B00;
+    outline: none;
+    resize: none;
+}
+.contactform .inputBox span
+{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #000;
+}
+
+.contactform .inputBox input:focus ~ span,
+.contactform .inputBox input:valid ~ span,
+.contactform .inputBox input:focus ~ span,
+.contactform .inputBox input:valid ~ span,
+.contactform .inputBox textarea:focus ~ span,
+.contactform .inputBox textarea:valid ~ span
+{
+    color: #FF4B00;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactform .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: #FF4B00;
+    color: #ffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+@media (max-width: 900px)
+{
+    .contact
+    {
+        padding: 50px;
+    }
+
+    .container
+    {
+        flex-direction: column;
+    }
+    .container .contactInfo
+    {
+        margin-bottom: 40px;
+    }
+    .container .contactInfo,
+    .contactform
+    {
+        width: 100%;
+    }
+}
+
+.reveal
+{
+    position: relative;
+    transform: translateY(150px);
+    transition: all 2s ease-in ;
+}
+
+.reveal.active
+{
+    transform: translateY(0px);
+    opacity: 1;
+
+}
