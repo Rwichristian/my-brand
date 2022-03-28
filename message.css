@@ -36,7 +36,6 @@
     list-style: none;
     box-sizing:border-box;
 }
-
 html
 {
     font-size: 14px;
@@ -68,7 +67,6 @@ a
 {
     color: var(--color-dark);
 }
-
 img
 {
     display: block;
@@ -246,155 +244,10 @@ aside .sidebar .message-count
     font-size: 11px;
     border-radius: var(--border-radius-1);
 }
-
-/*==============*/
-
 main
 {
     margin-top: 1.4rem;
 }
-
-main .date
-{
-    display: inline-block;
-    background: var(--color-light);
-    border-radius: var(--border-radius-1);
-    margin-top: 1rem;
-    padding: 0.5rem 1.6rem;
-}
-
-main .date input[type='date']
-{
-    background: transparent;
-    color: var(--color-dark);
-}
-
-main .insights
-{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.6rem;
-}
-
-main .insights > div
-{
-    background: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    margin-top: 1rem;
-    box-shadow: var(--box-shadow);
-    transition: all 300ms ease;
-}
-
-main .insights > div:hover
-{
-    box-shadow: none;
-}
-
-main .insights > div span
-{
-    background: coral;
-    padding: 0.5rem;
-    border-radius: 50%;
-    color: var(--color-white);
-    font-size: 2rem;
-}
-
-main .insights > div.monthly-visits span
-{
-    background: var(--color-danger);
-}
-
-main .insights > div.yearly-visits span
-{
-    background: var(--color-success);
-}
-
-
-main .insights > div .middle
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-main .insights h3
-{
-    margin: 1rem 0 0.6rem;
-    font-size: 1rem;
-}
-
-main .insights .progress
-{
-    position: relative;
-    width: 92px;
-    height: 92px;
-    border-radius: 50%;
-}
-
-main .insights svg
-{
-    width: 7rem;
-    height: 7rem;
-}
-
-main .insights svg circle
-{
-    fill: none;
-    stroke: var(--color-primary);
-    stroke-width: 14;
-    stroke-linecap: round;
-    transform: translate(5px, 5px);
-    stroke-dasharray:110;
-    stroke-dashoffset: 92;
-}
-
-main .insights .bounce-rate svg circle
-{
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-
-main .insights .monthly-visits svg circle
-{
-    stroke-dashoffset: 35;
-    stroke-dasharray: 110;
-}
-
-main .insights .yearly-visits svg circle
-{
-    stroke-dashoffset: 20;
-    stroke-dasharray: 80;
-}
-
-
-main .insights .bounce-rate svg circle
-{
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-
-
-main .insights .progress .number
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-main .insights  small
-{
-    margin-top: 1.3rem;
-    display: block;
-}
-
-/*+++++++++++++++++++++++++++*/
 
 main .recent-blogpost
 {
@@ -442,8 +295,6 @@ main a
     color: var(--color-primary);
 }
 
-/*22222222222222222222222222222222222222*/
-
 
 .right
 {
@@ -461,6 +312,7 @@ main a
 {
     display: none;
 }
+
 
 .right .theme-toggler
 {
@@ -530,149 +382,6 @@ main a
     margin-bottom:  1rem;
 }
 
-.right .sales-analytics h2
-{
-    margin-bottom: 0.8rem;
-}
-
-.right .sales-analytics .item
-{
-    background: var(--color-white);
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.7rem;
-    padding: 1.4rem;
-    border-radius: var(--color-background);
-    border-radius: var(--border-radius-3);
-    box-shadow: var(--box-shadow);
-}
-
-.right .sales-analytics .item:hover
-{
-    box-shadow: none;
-}
-
-.right .sales-analytics .item .right
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin: 0;
-    width: 100%;
-}
-
-.right .sales-analytics .item .icon
-{
-    padding: 0.6rem;
-    color: var(--color-white);
-    border-radius: 50%;
-    background: var(--color-primary);
-    display: flex;
-}
-
-.right .sales-analytics .item.offline .icon
-{
-    background: var(--color-danger);
-}
-
-.right .sales-analytics .item.customer .icon
-{
-    background: var(--color-success);
-}
-
-.right .sales-analytics .add-product
-{
-    background: transparent;
-    border: 2px dashed var(--color-primary);
-    color: var(--color-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.right .sales-analytics .add-product div
-{
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-}
-
-.right .sales-analytics .add-product div h3
-{
-    font-weight: 600;
-}
-
-.contactform
-{
-    width: 40%;
-    padding: 40px;
-    background: #ffff;
-    box-shadow: var(--box-shadow);
-}
-
-.contactform:hover
-{
-    box-shadow: none;
-}
-
-.contactform h4
-{
-    color: #FF4B00;
-    font-weight: 500;
-}
-
-.contactform .inputBox
-{
-    position: relative;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.contactform .inputBox input,
-.contactform .inputBox textarea
-{
-    width: 100%;
-    margin: 10px 0;
-    border: none;
-    border-bottom: 2px solid #FF4B00;
-    outline: none;
-    resize: none;
-}
-.contactform .inputBox span
-{
-    position: absolute;
-    left: 0;
-    padding: 1px 0;
-    margin: 2px 0;
-    pointer-events: none;
-    transition: 0.5s;
-    color: #000;
-}
-
-.contactform .inputBox input:focus ~ span,
-.contactform .inputBox input:valid ~ span,
-.contactform .inputBox input:focus ~ span,
-.contactform .inputBox input:valid ~ span,
-.contactform .inputBox textarea:focus ~ span,
-.contactform .inputBox textarea:valid ~ span
-{
-    color: #FF4B00;
-    font-size: 12px;
-    transform: translateY(-20px);
-}
-
-.contactform .inputBox input[type="submit"]
-{
-    width: 100px;
-    background: #FF4B00;
-    color: #ffff;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 18px;
-
-}
 
 @media screen and (max-width: 1200px) 
 {

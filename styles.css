@@ -56,16 +56,10 @@ body
 
 .home
 {   display: grid;
-    width: 96%;
+    width: 100%;
     margin: 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 14rem auto 23rem;
-    display: grid;
-    width: 96%;
-    margin: 0 auto;
-    gap: 1.8rem;
-    grid-template-columns: 14rem auto 23rem;
-
+    grid-template-columns: 10rem auto 23rem;
 }
 
 html
@@ -241,7 +235,7 @@ a
 {
     position: relative;
     top: 1.4rem;
-    margin-left: auto;
+    margin-left: 15rem;
     margin-right: auto;
     display: block;
     justify-content: center;
@@ -303,6 +297,19 @@ p
     padding-bottom: 12px;
 }
 
+.hi .home-content h1
+{
+    margin-left: 8rem;
+}
+.hi .home-content h4
+{
+    margin-left: 8rem;
+    padding: 1rem 1rem;
+}
+.hi .home-content .top
+{
+    margin-left: 8rem;
+}
 p .tittle
 {
     color: #FF4B00;
@@ -321,6 +328,8 @@ ul
 .anchor-work
 {
     text-align: center;
+    margin-left: 8rem;
+    padding: 1rem 0;
 }
 
 .my
@@ -330,6 +339,16 @@ ul
     color: #ffff;
     border-radius: 3px;
     padding: 5px;
+}
+
+.home-content
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 23px;
 }
 
 .home-w
@@ -393,21 +412,20 @@ ul
 {
     
     display: flex;
-    justify-content: space-between;
+    gap: 12rem;
+    justify-content: center;
     flex-direction: row;
     padding-left: 6px;
     list-style: none;
 }
 
 .skill-list2
-{
-    
+{ 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 12rem;
     margin-top: 40px;
-    margin-left: 180px;
-    margin-right: 180px;
     list-style: none;
 }
 
@@ -452,6 +470,8 @@ padding-top: 12px;
     float: right;
     padding-right: 10px;
     padding-top: 40px;
+    position: relative;
+    display: block;
 }
 .web-design
 {
@@ -476,9 +496,11 @@ padding-top: 12px;
 
 .image-2
 {
-    float: left;
+    float: right;
     padding-right: 10px;
     padding-top: 40px;
+    position: relative;
+    display: block;
 }
 
 .graphic-design
@@ -488,6 +510,8 @@ padding-top: 12px;
     justify-content: space-between;
     position: relative;
     margin: 40px 1;
+    margin-top: 12px;
+    margin-bottom: 12px;
     background: #ffff;
     padding: 30px;
     text-align: center;
@@ -502,8 +526,11 @@ padding-top: 12px;
 
 .image-3
 {
+
     float: right;
-    padding-right: 10px;
+    padding-right: 20px;
+    padding-top: 0px;
+    position: relative;
 }
 
 .blogs
@@ -863,6 +890,7 @@ padding-top: 12px;
         max-width: 290px;
         max-height: 200px;
         top: 2rem;
+        margin-left: 8rem;
     }
 
     .top-right .login
@@ -884,6 +912,26 @@ padding-top: 12px;
         z-index: 4;
         box-shadow: 0 1rem 1rem var(--color-light);
     }
+
+.hi .home-content h1
+{
+    margin-left: 6rem;
+}
+.hi .home-content h4
+{
+    margin-left: 6rem;
+    padding: 1rem 1rem;
+}
+.hi .home-content .top
+{
+    margin-left: 6rem;
+}
+.anchor-work
+{
+    text-align: center;
+    margin-left: 6rem;
+    padding: 1rem 0;
+}
     
 }
 
@@ -921,4 +969,68 @@ padding-top: 12px;
     {
         justify-content: center;
     }
+
+    .image-3
+    {
+        height: 10px;
+        width: 20px;
+    }
+    .hi .home-content h1
+{
+    margin-left: 0rem;
+}
+.hi .home-content h4
+{
+    margin-left: -23px;
+    padding: -2rem 1rem;
+}
+.hi .home-content .top
+{
+    margin-left: -2rem;
+}
+.anchor-work
+{
+    text-align: center;
+    margin-left: 6rem;
+    padding: -2rem 0;
+    position: relative;
+}
+
+.hi .me
+{
+    max-width: 290px;
+    max-height: 200px;
+    top: 2rem;
+    margin-left: -2rem;
+}
+.home
+{
+    grid-template-columns: 0rem auto 20rem;
+}
+
+.img-b
+{
+    max-width:1px;
+    margin-left: 33px;
+}
+.skill-list1
+{
+    
+    display: flex;
+    gap: 0rem;
+    justify-content: center;
+    flex-direction: row;
+    padding-left: 6px;
+    list-style: none;
+}
+
+.skill-list2
+{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0rem;
+    margin-top: 40px;
+    list-style: none;
+}
 }
