@@ -237,3 +237,18 @@ nav ul li a:hover
      color: coral;
      font-size: 15px;
  }
+
+ button
+ {
+     font-family: 'poppins' , sans-serif;
+ }
+
+ span
+ {
+    font-family: 'poppins' , sans-serif;
+ }
+
+ input
+ {
+    font-family: 'poppins' , sans-serif; 
+ }
