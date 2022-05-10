@@ -233,26 +233,26 @@
                     </div>
                 </div>
                 <div class="contactform">
-                    <form >
+                    <form id="messages"  >
                         <h2>Send a Message</h2>
                         <div class="inputBox">
-                            <input type="text" name="" required>
+                            <input type="text"  id="name" name="" required>
                             <span>Full Name</span>
                         </div>
                         <div class="inputBox">
-                            <input type="text" name="" required>
+                            <input type="text" id="email" name="" required>
                             <span>Email</span>
                         </div>
                         <div class="inputBox">
-                            <input type="text" name="" required>
+                            <input type="text" id="subject" name="" required>
                             <span>Subject</span>
                         </div>
                         <div class="inputBox">
-                            <textarea required></textarea>
+                            <textarea id="message" required></textarea>
                             <span>Your Message...</span>
                         </div>
                         <div class="inputBox">
-                            <input type="submit" name="" value="Send">
+                            <input type="submit" onclick="userInput()" name="send" value="Send">
                         </div>
                     </form>
                 </div>
@@ -287,6 +287,40 @@
         AOS.init();
     </script>
     <script src="main.js"></script>
+
+    <script>
+        function userInput()
+        {
+            document.getElementById("messages").addEventListener("submit", (e) => {
+      e.preventDefault();
+            const name = document.getElementById('name').value;
+            const subject = document.getElementById('subject').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "name": name,
+  "email": email,
+  "subject": subject,
+  "message": message
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://app-endpoints.herokuapp.com/messages", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+            })
+        }
+    </script>
 
 <div class="footer">
     <span class="material-icons-sharp">copyright</span>
