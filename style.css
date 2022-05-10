@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+:root
+{ 
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success:#41f1b6; 
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark:#7d8da1;
+    --color-dark: #363949;
+    --color-info-light: #dce1eb;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background:#f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+
 *
 {
     margin: 0;
@@ -9,8 +37,7 @@
 {
     height: 100%;
     width: 100%;
-    background-image: url(img-blog/papyrus.png);
-    background-position: center;
+    background:var(--color-info-light);
     background-size: cover;
     position: absolute;
 }
@@ -89,9 +116,16 @@ nav ul li a:hover
      height: 480px;
      position: relative;
      margin: 2% auto;
-     background: rgba(0,0,0,00.3);
+     background: var(--color-white);
      padding: 10px;
      overflow: hidden;
+     box-shadow: var(--box-shadow);
+     border-radius: var(--border-radius-1);
+ }
+
+ .form-box:hover
+ {
+     box-shadow: none;
  }
 
  .button-box
@@ -176,7 +210,7 @@ nav ul li a:hover
 
  span 
  {
-     color: #fff;
+     color: rgb(0, 0, 0);
      font-size: 14px;
      bottom: 68px;
      position: absolute;
@@ -189,8 +223,8 @@ nav ul li a:hover
 
  #login input
  {
-     color: #fff;
-     font-size: 15;
+     color: coral;
+     font-size: 15px;
  }
 
  #register
@@ -200,6 +234,21 @@ nav ul li a:hover
 
  #register input
  {
-     color: #fff;
-     font-size: 15;
+     color: coral;
+     font-size: 15px;
+ }
+
+ button
+ {
+     font-family: 'poppins' , sans-serif;
+ }
+
+ span
+ {
+    font-family: 'poppins' , sans-serif;
+ }
+
+ input
+ {
+    font-family: 'poppins' , sans-serif; 
  }
