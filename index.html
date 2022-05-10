@@ -252,7 +252,7 @@
                             <span>Your Message...</span>
                         </div>
                         <div class="inputBox">
-                            <input type="submit" name="send" value="Send">
+                            <input type="submit" onclick="userInput()" name="send" value="Send">
                         </div>
                     </form>
                 </div>
@@ -294,7 +294,7 @@
             document.getElementById("messages").addEventListener("submit", (e) => {
       e.preventDefault();
             const name = document.getElementById('name').value;
-            const subject = document.getElementById('sbject').value;
+            const subject = document.getElementById('subject').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             var myHeaders = new Headers();
