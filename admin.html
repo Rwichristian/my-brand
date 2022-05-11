@@ -313,5 +313,35 @@
         </div>
     </div>
     <script src="main.js"> </script>
+    <script>
+        const container = document.getElementById('messageContainer');
+    const getMessage = () => {
+      var myHeaders = new Headers();
+      var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+      };
+
+      fetch("https://app-endpoints.herokuapp.com/messages/", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+          const messages = result || []
+
+          messages.forEach(element => {
+            messageContainer.innerHTML += `
+            <tr>
+                    <td>${element.name}</td>
+                    <td>${element.email}</td>
+                    <td>${element.subject}</td>
+                    <td >${element.message}</td>
+                </tr>`
+          });
+        })
+        .catch(error => console.log('error', error));
+
+    }
+    getMessage()
+    </script>
 </body>
 </html>

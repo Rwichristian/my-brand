@@ -79,20 +79,8 @@
                            transform into “tap”.</p>
                     </div>
                 </div>
-                <div class="blog-2" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="img-b"><img src="img-work/graphic 1.png" alt=""  height="120" width="200"></div>
-                    <div>
-                        <h4>Is graphic Design still a thing?</h4>
-                        <p>Graphic Design might seem like
-                            a relatively young industry
-                            compared to say, banking or 
-                           carpentry or whatever but 
-                           it’s also become heavily reliant on 
-                           technology and 
-                           technology changes so rapidly these 
-                           days that were all constantly
-                            having to play catch up. Sure, there’s a massive dollop of craft involved but it was only a decade and a half ago that us designers were first discovering the Apple Mac ...</p>
-                    </div>
+                <div  id="blogContainer" class="blog-2" data-aos="fade-right" data-aos-duration="1000">
+
                 </div>
             </div>
         </main>
@@ -122,5 +110,33 @@
             <i class="fa fa-email" aria-hidden="true"></i>
     </div>
 </body>
-<script></script>
+<script>
+    const container = document.getElementById('blogContainer');
+const getMessage = () => {
+  var myHeaders = new Headers();
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+
+  fetch("https://app-endpoints.herokuapp.com/posts/", requestOptions)
+    .then(response => response.json())
+    .then(result => {
+      const messages = result || []
+
+      messages.forEach(element => {
+    messageContainer.innerHTML += `
+    <div>
+    <h4>${element.title}</h4>
+    <p>${element.description}</p>
+    </div>
+    `
+      });
+    })
+    .catch(error => console.log('error', error));
+
+}
+getMessage()
+</script>
 </html>
