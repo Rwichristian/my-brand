@@ -29,7 +29,7 @@
                     <span class="material-icons-sharp">insights</span>
                     <h3>Main</h3>
                 </a>
-                <a href="analytics.html">
+                <a href="blogs.html">
                     <span class="material-icons-sharp">person_outline</span>
                     <h3>Analytics</h3>
                 </a>
@@ -38,7 +38,7 @@
                     <h3>Message</h3>
                     <span class="message-count"></span>
                 </a>
-                <a href="dashboard.html">
+                <a href="comments.html">
                     <span class="material-icons-sharp">grid_view</span>
                     <h3>Dashboard</h3>
                 </a>
@@ -64,8 +64,39 @@
                 <span>your post</span>
             </div>
             <div class="inputBox">
-                <input type="submit" onclick="userInput()" name="send" value="Send">
+                <input type="submit" onclick="userInput()" name="post" value="post">
             </div>
         </form>
     </div>
+    <script>
+        function userInput()
+        {
+            const user = JSON.parse(localStorage.getItem('loginedUser'))
+            document.getElementById("messages").addEventListener("submit", (e) => {
+      e.preventDefault();
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", `Bearer ${user.token}`);
+            myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "title": title,
+  "description": description
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://app-endpoints.herokuapp.com/posts", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+            })
+        }
+    </script>
 </body>

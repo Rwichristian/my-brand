@@ -382,6 +382,16 @@ main a
     margin-bottom:  1rem;
 }
 
+.delete
+{
+    color: var(--color-white);
+    background-color: var(--color-danger);
+}
+.patch
+{
+    color: var(--color-white);
+    background-color: var(--color-success);
+}
 
 @media screen and (max-width: 1200px) 
 {

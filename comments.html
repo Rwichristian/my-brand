@@ -52,21 +52,55 @@
         </aside>
 <main>
     <div class="recent-blogpost">
-        <h2>Messages</h2>
+        <h2>comments</h2>
         <table>
             <thead>
                 <tr>
                     <th>name</th>
                     <th>email</th>
-                    <th>subject</th> 
-                    <th>message</th>
+                    <th>comment</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody id="messageContainer">
+
+                <!-- <tr>
+                    <td>Udraw</td>
+                    <td>U.Belyse</td>
+                    <td>Graphic Design</td>
+                    <td class="success">posted</td>
+ 
+                </tr>
+                <tr>
+                    <td>Picky-webz</td>
+                    <td>M.James</td>
+                    <td>Web Design</td>
+                    <td class="warning">pending</td>
+
+                </tr>
+                <tr>
+                    <td>teamwebz</td>
+                    <td>R.Arnaud</td>
+                    <td>Web Team</td>
+                    <td class="danger">Suspended</td>
+
+                </tr>
+                <tr>
+                    <td>Picky-webz</td>
+                    <td>M.Sandrine</td>
+                    <td>web Design</td>
+                    <td class="warning">pending</td>
+
+                </tr>
+                <tr>
+                    <td>teamwebz</td>
+                    <td>B.Esther</td>
+                    <td>Web Team</td>
+                    <td class="success">Admitted</td>
+
+                </tr> -->
             </tbody>
         </table>
-        <input type="submit" id="delete" onclick="userInput()" class="delete" name="delete" value="delete">
         <a href="#">Show All</a>
         </main>
         <div class="right">
@@ -84,6 +118,41 @@
                     </div>
                 </div>
             </div>
+            <!-- <div class="recent-updates">
+                <h2>Recent-updates</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="img-blog/DSC_09q.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>R.Steven</b>The lessons are awesome and the teams are super cooperative.
+                                #Teamwebcrows in the lead...</p>
+                                <small class="text-muted">45 Minutes Ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="img-blog/Screenshot_20220315-210021.png">
+                        </div>
+                        <div class="message">
+                            <p><b>M.William</b>Wait to go chris! who knew I could get all I need in one place.
+                                #Teamtiatans all the way</p>
+                                <small class="text-muted">58 Minutes Ago</small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="img-blog/DSC_092.jpg">
+                        </div>
+                        <div class="message">
+                            <p><b>K.Deborah</b>The lessons are awesome and the teams are super cooperative.
+                                #Teamwebcrows in the lead...</p>
+                                <small class="text-muted">1 Hour Ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
     <script src="main.js"> </script>
@@ -97,7 +166,7 @@
         redirect: 'follow'
       };
 
-      fetch("https://app-endpoints.herokuapp.com/messages/", requestOptions)
+      fetch("https://app-endpoints.herokuapp.com/comments/", requestOptions)
         .then(response => response.json())
         .then(result => {
           const messages = result || []
@@ -107,8 +176,8 @@
             <tr>
                     <td>${element.name}</td>
                     <td>${element.email}</td>
-                    <td>${element.subject}</td>
-                    <td >${element.message}</td>
+                    <td >${element.comment}</td>
+                    <td><input type="submit" onclick="userInput()" class="delete" name="delete" value="delete"></td>
                 </tr>`
           });
         })
@@ -116,26 +185,6 @@
 
     }
     getMessage()
-
-    function erase ()
-    {
-        document.getElementById("delete").addEventListener("submit", (e) => {
-      e.preventDefault();   
-  var myHeaders = new Headers();
-myHeaders.append("Authorization", `Bearer ${user.token}`);
-
-var requestOptions = {
-  method: 'DELETE',
-  headers: myHeaders,
-  redirect: 'follow'
-};
-
-fetch("https://app-endpoints.herokuapp.com/messages/${id}", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
-})
-    }
     </script>
 </body>
 </html>

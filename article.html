@@ -78,22 +78,30 @@
                            iPhone and iPad, they simply 
                            transform into “tap”.</p>
                     </div>
-                    <a href="article.html" class="cv">read more</a>
                 </div>
 
             </div>
         </main>
-        <div class="sketchy">
-            <div class="web-design" data-aos="fade-left" data-aos-duration="1000">
-                <div class="work2">
-                    <h4>Graphic Design 101</h4>
-                    <p class="">
-                        Graphic design can be an awful lot of trouble at the beginning. from learning the user interface to getting aquinted with the dredful pentool, things can messy very quickly. That’s where sketchy comes to save the day
-                    </p>
+                <div class="contactform">
+                    <h4>leave a comment</h4>
+                    <form id="messages"  >
+                        <div class="inputBox">
+                            <input type="text"  id="name" name="" required>
+                            <span>Full Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" id="email" name="" required>
+                            <span>Email</span>
+                        </div>
+                        <div class="inputBox">
+                            <textarea id="comment" required></textarea>
+                            <span>Your comment...</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" onclick="userInput()" name="send" value="Send">
+                        </div>
+                    </form>
                 </div>
-                <div class="image-2"><img src="img-work/1039319_doodle_sketch_social_treehouse_icon 1.png" alt="" height="120" width="200"></div>
-            </div>
-        </div>
         <h3>works</h3>
         <div class="work">
             <img src="img-work/painting.png" height="230" width="290" >
@@ -131,7 +139,6 @@ const getMessage = () => {
     <h4>${element.title}</h4>
     <p>${element.description}</p>
     </div>
-
     </div>
     `
       });
@@ -141,4 +148,36 @@ const getMessage = () => {
 }
 getMessage()
 </script>
+
+<script>
+        function userInput()
+        {
+            document.getElementById("messages").addEventListener("submit", (e) => {
+      e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const comment = document.getElementById('comment').value;
+            var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+var raw = JSON.stringify({
+  "name": name,
+  "email": email,
+  "comment": comment
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://app-endpoints.herokuapp.com/comments", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+            })
+        }
+    </script>
 </html>
