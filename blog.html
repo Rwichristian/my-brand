@@ -59,7 +59,7 @@
                     </a>
                 </div>
             </aside>
-            <div class="posts">
+            <div id="blogContainer" class="posts">
                 <div class="blog-1" data-aos="fade-right" data-aos-duration="1000">
                     <div class="img-b"><img src="img-work/pentool 1.png" alt=""  height="120" width="200"></div>
                     <div>
@@ -125,8 +125,8 @@ const getMessage = () => {
       const messages = result || []
 
       messages.forEach(element => {
-    messageContainer.innerHTML += `
-    <div  id="blogContainer" class="blog-2" data-aos="fade-right" data-aos-duration="1000">
+    blogContainer.innerHTML += `
+    <div   class="blog-2" data-aos="fade-right" data-aos-duration="1000">
     <div>
     <h4>${element.title}</h4>
     <p>${element.description}</p>

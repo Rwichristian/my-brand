@@ -177,30 +177,35 @@
                     <td>${element.title}</td>
                     <td>${element.description}</td>
                     <td>${element.date}</td>
-                    <td><input type="submit" onclick="userInput()" class="delete" name="delete" value="delete"></td>
+                    <td><input type="submit" onclick="deleteArticle(${element._id})" class="delete" name="delete" value="delete"></td>
                     <td><input type="submit"  class="patch" name="update" value="update"></td>
                 </tr>`
           });
         })
         .catch(error => console.log('error', error));
-
-
-        //delete
-        var myHeaders = new Headers();
-myHeaders.append("Authorization",`Bearer ${user.token}` );
-
-var requestOptions = {
-  method: 'DELETE',
-  headers: myHeaders,
-  redirect: 'follow'
-};
-
-fetch("https://app-endpoints.herokuapp.com/posts/627cdabdff1af3e2cfc4683a", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
     }
     getMessage()
+
+        //delete
+    const deleteArticle = id => {
+      var myHeaders = new Headers();
+      myHeaders.append("Authorization", `Bearer ${user.token}`);
+
+      var requestOptions = {
+        method: 'DELETE',
+        headers: myHeaders,
+        redirect: 'follow'
+      };
+
+      fetch(`https://app-endpoints.herokuapp.com/posts/${id}`, requestOptions)
+        .then(response => response.json())
+        .then(result => {
+          console.log(result)
+          getMessage()
+        })
+        .catch(error => console.log('error', error));
+
+    }
     </script>
 </body>
 </html>

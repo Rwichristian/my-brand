@@ -154,7 +154,7 @@ fetch("https://app-endpoints.herokuapp.com/user/login", requestOptions)
         .then(result => {
           console.log(result)
           if (result) {
-            localStorage.setItem("loginedUser", JSON.stringify(result.user));
+            localStorage.setItem("loginedUser", JSON.stringify(result));
             if (result.email == "admin@gmail.com") {
               location.href = "./admin.html";
             } else {
